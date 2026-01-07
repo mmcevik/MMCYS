@@ -1,0 +1,9 @@
+.sidebar{width:240px;background:#223238;color:#cddae0;display:flex;flex-direction:column;padding:18px 14px;box-shadow:2px 0 8px rgba(0,0,0,0.06);height:100%;position:sticky;top:0}
+.sidebar-brand{font-weight:700;margin-bottom:18px;padding:10px 12px;border-radius:6px;background:rgba(255,255,255,0.02);font-size:15px}
+.sidebar-nav{display:flex;flex-direction:column;gap:6px}
+.nav-item{padding:10px 12px;border-radius:6px;color:#cbd9de;text-decoration:none;cursor:pointer;display:flex;align-items:center;gap:10px}
+.nav-item .icon{width:22px;text-align:center}
+.nav-item:hover{background:rgba(255,255,255,0.015)}
+.nav-item.active{background:var(--accent);color:white;font-weight:600}
+.sidebar-footer{margin-top:auto;padding-top:12px;border-top:1px solid rgba(255,255,255,0.03);font-size:13px;color:#9fb0b8}
+.company{margin-bottom:6px}

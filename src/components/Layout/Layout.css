@@ -1,0 +1,3 @@
+.app-shell{display:flex;height:100vh}
+.main-shell{flex:1;display:flex;flex-direction:column}
+.main-content{padding:16px;overflow:auto}

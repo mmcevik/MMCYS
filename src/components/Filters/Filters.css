@@ -1,0 +1,6 @@
+.filters-row { }
+.filter-cell input{padding:6px;border-radius:4px;border:1px solid #e0e0e0}
+.select-all-checkbox{opacity:0;width:16px;height:16px;margin:0;position:absolute}
+.checkbox .checkbox-custom{width:16px;height:16px;border:2px solid #e2e6e8;border-radius:2px;display:inline-block;background:#fff}
+.checkbox input[type="checkbox"]:checked + .checkbox-custom{background:#0f9fb0;border-color:#0f9fb0}
+.checkbox input[type="checkbox"]:checked + .checkbox-custom::after{content:'\2713';color:#fff;font-size:11px;display:block;text-align:center;line-height:16px}

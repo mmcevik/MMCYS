@@ -1,0 +1,210 @@
+.gorevler-page{
+  padding:20px;
+  font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  height:100%;
+  box-sizing:border-box;
+  display:flex;
+  flex-direction:column;
+  min-height:0; /* allow internal flex children to scroll without causing parent overflow */
+}
+.gorevler-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;padding:6px 4px}
+.gorevler-header h2{margin:0;color:#263238;font-size:20px} 
+.excel-btn{background:#27ae60;color:white;border:none;padding:8px 12px;border-radius:4px;cursor:pointer;display:inline-flex;align-items:center;gap:8px;box-shadow:0 1px 0 rgba(0,0,0,0.06)}
+.excel-btn:hover{filter:brightness(0.95)}
+.excel-btn[disabled]{opacity:0.6;cursor:not-allowed}
+.btn-small{background:#e9ecef;border:1px solid #d6d8db;padding:8px 10px;border-radius:4px;margin-left:8px}
+.btn-small[disabled]{opacity:0.6;cursor:not-allowed}
+.btn-primary[disabled]{opacity:0.6;cursor:not-allowed}
+.selected-count{margin-left:12px;color:#0b7285;font-weight:600}
+.gorevler-table-wrap{
+  flex:1 1 auto;
+  min-height:0;
+  overflow:auto;
+  background:#f1f3f4;
+  border:1px solid #e6eef0;
+  padding:12px;
+  border-radius:6px;
+}
+.gorevler-table{width:100%;border-collapse:collapse;background:white} 
+.gorevler-table thead tr.filters-row input, .gorevler-table thead tr.filters-row select{width:100%;box-sizing:border-box;padding:6px;border:1px solid #ccc;border-radius:2px}
+.filter-cell{display:flex;align-items:center;gap:6px}
+.filter-cell{display:flex;align-items:center;gap:6px}
+.filter-cell input{padding:4px 6px;border-radius:4px;border:1px solid #e0e0e0;height:28px;font-size:13px;color:var(--muted);background:#fff}
+.filter-cell select{padding:4px 6px;border-radius:4px;border:1px solid #e0e0e0;height:28px;font-size:13px;color:var(--muted);background:#fff}
+.filter-cell input:focus, .filter-cell select:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(30,167,215,0.06)}
+.filter-cell .filter-icon{font-size:12px;color:#707070;padding-left:6px}
+.button-focus:focus{outline:none;box-shadow:0 0 0 3px rgba(15,159,176,0.08)}
+.filter-cell .filter-icon{font-size:14px;color:var(--muted-2);padding-left:6px}
+.filter-cell .filter-btn{background:#f3f4f6;color:#333;border:1px solid #dcdcdc;padding:4px 6px;border-radius:4px;cursor:pointer;font-size:12px}
+
+/* specific widths to match screenshot and alignment */
+.filter-input.number-filter{width:84px}
+.filter-input.type-filter{width:56px}
+.filter-input.from-filter{width:180px}
+.filter-input.to-filter{width:180px}
+.filter-input.subject-filter{width:140px}
+.filter-input.barcode-filter{width:120px}
+.filter-input.process-filter{width:120px}
+.filter-input.activity-filter{width:120px}
+.filter-input.creator-filter{width:180px}
+.filter-input.activityStart-filter{width:120px}
+.filter-input.processStart-filter{width:120px}
+.filter-input.branch-filter{width:100px}
+.filter-input.info-filter{width:120px}
+.filter-cell input{padding:6px;border-radius:4px;border:1px solid #dcdcdc}
+.filter-cell .filter-btn{background:var(--accent);color:white;border:none;padding:6px 8px;border-radius:4px;cursor:pointer;font-size:12px}
+.filter-cell .filter-btn:hover{filter:brightness(0.95)}
+.filter-cell .filter-icon{background:transparent;border:none;color:#888}
+.gorevler-table th, .gorevler-table td{padding:10px 12px;border-bottom:1px solid #f0f2f3;text-align:left;vertical-align:middle;font-size:14px}
+.gorevler-table thead th{font-weight:700;color:#2b3940}
+.gorevler-table thead tr.filters-row th{position:sticky;top:0;background:#fbfcfd;z-index:6}
+.gorevler-table thead tr:nth-child(2) th{position:sticky;top:48px;background:#fbfcfd;z-index:5}
+.gorevler-table tbody tr:hover{background:#f4fbff}
+.gorevler-table thead input, .gorevler-table thead select{background:#fff}
+/* Map small buttons to legacy toolbar styles for compatibility */
+.btn-sm{background:#fff;border:1px solid #dcdcdc;padding:8px 10px;border-radius:6px;margin-left:8px;color:#333;box-shadow:0 1px 0 rgba(0,0,0,0.03)}
+.table-toolbar .left-tools .btn-success{background:#2db04b;color:white;border:none;padding:8px 14px;border-radius:4px;font-weight:600}
+.table-toolbar .left-tools .btn-secondary{background:#fff;border:1px solid #e0e0e0;padding:6px 10px;border-radius:6px;color:#333}
+.table-toolbar .right-tools .btn-sm{background:#fff;border:1px solid #dcdcdc;padding:6px 10px;border-radius:6px;min-width:110px}
+.gorevler-table .actions .btn-sm{width:34px;height:34px;padding:0;border-radius:6px;display:inline-flex;align-items:center;justify-content:center}
+
+.gorevler-table .mono{font-family:monospace;font-size:13px;color:#333}
+.mono-compact{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:220px}
+.gorevler-table .actions{display:flex;flex-direction:column;align-items:center;gap:8px;width:64px;padding-left:8px}
+.gorevler-table .actions button{background:var(--accent);border:none;color:white;width:34px;height:34px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 1px 0 rgba(0,0,0,0.06)}
+.gorevler-table .actions button.secondary{background:#2aa2d6}
+.gorevler-table .actions button:hover{transform:translateY(-2px);box-shadow:0 6px 12px rgba(0,0,0,0.08)}
+.gorevler-table .actions button:focus{outline:none;box-shadow:0 0 0 3px rgba(15,159,176,0.12)}
+/* Custom checkbox design (square) */
+.checkbox{display:inline-flex;align-items:center;position:relative;margin-left:6px}
+.gorevler-table td:first-child, .gorevler-table th:first-child{width:48px;text-align:center;padding-left:6px;padding-right:6px}
+.checkbox input[type="checkbox"]{position:absolute;opacity:0;width:16px;height:16px;margin:0}
+.checkbox .checkbox-custom{width:16px;height:16px;border:2px solid #e2e6e8;border-radius:2px;display:inline-block;background:#fff;box-sizing:border-box}
+.checkbox input[type="checkbox"]:checked + .checkbox-custom{background:#0f9fb0;border-color:#0f9fb0}
+.checkbox input[type="checkbox"]:checked + .checkbox-custom::after{content:'\2713';color:#fff;font-size:11px;display:block;text-align:center;line-height:16px}
+
+/* export badge */
+.export-badge{background:var(--accent);color:#fff;border-radius:12px;padding:2px 8px;margin-left:6px;font-size:12px;font-weight:700}
+
+/* pagination page input style (active look) */
+.page-input{width:48px;padding:6px;text-align:center;border-radius:6px;background:#fff;color:#111;font-weight:700;border:1px solid #dcdcdc} 
+.gorevler-footer{display:flex;justify-content:space-between;align-items:center;padding:12px;border-top:1px solid #e6eef0;margin-top:12px;border-radius:0;background:#f3f4f6}
+.pagination-left{display:flex;align-items:center;gap:8px}
+.pagination-left button{background:#fff;border:1px solid #e6eef0;padding:6px 8px;border-radius:6px;width:36px;height:36px;cursor:pointer}
+.pagination-left button:hover{background:var(--primary);color:#fff;border-color:var(--primary)}
+.pagination-left button[disabled]{background:#fff;color:#666;border-color:#ddd;cursor:not-allowed}
+.page-input{width:44px;padding:6px;text-align:center;border-radius:8px;background:#111;color:#fff;font-weight:700;border:2px solid rgba(0,0,0,0.2)}
+.page-input:focus{outline:none;box-shadow:0 0 0 3px rgba(16,185,129,0.08)}
+.page-input[disabled]{opacity:0.6}
+.pagination-left button[disabled]{opacity:0.4;cursor:not-allowed}
+.pagination-right{display:flex;align-items:center;gap:12px}
+.pagination-right select{padding:6px;border:1px solid #dcdcdc;border-radius:4px;background:#fff;color:var(--muted)}
+.summary{color:var(--muted);font-size:14px}
+.pagination-left{display:flex;align-items:center;gap:6px}
+.pagination-left button{background:transparent;border:1px solid #dcdcdc;padding:6px 8px;border-radius:4px}
+.page-input{width:52px;padding:6px;text-align:center;border:1px solid #dcdcdc;border-radius:4px}
+.pagination-right{display:flex;align-items:center;gap:12px}
+.pagination-right select{padding:6px;border:1px solid #dcdcdc;border-radius:4px}
+.summary{color:#555;font-size:14px}
+
+:root{
+  --bg:#ffffff; /* card background */
+  --muted:#6b7280; /* muted text */
+  --accent:#0f9fb0; /* primary accent (sidebar/action) */
+  --primary:#1ea7d7; /* action blue */
+  --success:#28a745;
+  --border:#e6eef0;
+  --muted-2:#9aa6ad;
+}
+
+/* header and card */
+.gorevler-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;padding:8px 6px}
+.gorevler-header h2{margin:0;color:#263238;font-size:20px}
+.gorevler-actions{display:flex;align-items:center;gap:8px}
+
+/* main table card */
+.gorevler-table-wrap{
+  flex:1 1 auto;
+  min-height:0;
+  overflow:auto;
+  border:1px solid var(--border);
+  padding:18px;
+  background:#f1f3f4;
+  box-shadow:0 1px 0 rgba(0,0,0,0.03);
+  max-height:none;
+}
+.gorevler-table{min-width:1400px}
+.table-toolbar{display:flex;justify-content:space-between;align-items:center;padding:10px 12px;margin-bottom:10px;background:#f7f7f8;border-radius:4px;border:1px solid #e6e7e8;position:relative} 
+.table-toolbar .left-tools{display:flex;align-items:center;gap:10px}
+.table-toolbar .right-tools{display:flex;align-items:center;position:absolute;right:12px;top:10px}
+.btn-refresh{background:#2fa6c9;color:#fff;border:none;padding:6px 10px;border-radius:4px;cursor:pointer;font-weight:600}
+.btn-refresh:hover{filter:brightness(0.96)}
+.excel-btn{background:#2db04b;color:white;border:none;padding:8px 14px;border-radius:4px;display:inline-flex;align-items:center;gap:8px;font-weight:600}
+.excel-btn[disabled]{opacity:0.6;cursor:not-allowed}
+.excel-btn .export-badge{background:#074e52;color:#fff;border-radius:12px;padding:2px 8px;margin-left:6px;font-size:12px;font-weight:700}
+.btn-clear{background:#fff;border:1px solid #e0e0e0;padding:6px 10px;border-radius:6px;color:#333}
+.btn-small{background:#fff;border:1px solid #dcdcdc;padding:8px 10px;border-radius:6px;margin-left:8px;color:#333;box-shadow:0 1px 0 rgba(0,0,0,0.03)}
+.btn-small[disabled]{opacity:0.7;cursor:not-allowed}
+.toolbar-note{color:#9aa4aa;margin-left:12px;font-size:13px}
+
+/* zebra rows */
+.gorevler-table tbody tr:nth-child(even){background:#fbfbfb}
+
+/* make filters smaller and less tall */
+.gorevler-table thead tr.header-row th{position:sticky;top:0;background:#fff;z-index:11;border-bottom:1px solid #eef2f3;padding:10px 12px}
+.gorevler-table thead tr.filters-row th{position:sticky;top:56px;background:#fff;z-index:10;border-bottom:1px solid #eef2f3;padding:8px 6px}
+.filter-cell{gap:6px;align-items:center;display:flex}
+.filter-cell input, .filter-cell select{height:34px;padding:6px 10px;border-radius:3px;border:1px solid #e0e6e8}
+.filter-input.number-filter{width:110px}
+.filter-input.type-filter{width:80px}
+.filter-input.from-filter{width:260px}
+.filter-input.to-filter{width:260px}
+.filter-input.subject-filter{width:220px}
+.filter-input.barcode-filter{width:140px}
+.filter-input.process-filter{width:160px}
+.filter-input.activity-filter{width:140px}
+.filter-input.creator-filter{width:260px}
+.filter-input.activityStart-filter{width:150px}
+.filter-input.processStart-filter{width:150px}
+.filter-input.branch-filter{width:120px}
+.filter-input.info-filter{width:140px}
+.filter-cell .filter-btn{padding:6px 8px;border-radius:4px;border:1px solid #dcdcdc;background:#fff;color:#6b7280}
+.filter-icon{width:18px;height:18px;border-radius:18px;display:inline-flex;align-items:center;justify-content:center;background:transparent;color:#1ea7d7;border:none;font-size:13px}
+
+/* make actions horizontal */
+.gorevler-table .actions{display:flex;flex-direction:row;align-items:center;gap:10px;width:120px;padding-left:8px}
+.gorevler-table .actions button{background:#45a2e5;border:none;color:white;width:34px;height:34px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:none} 
+.gorevler-table-wrap::-webkit-scrollbar{height:10px}
+.gorevler-table-wrap::-webkit-scrollbar-thumb{background:#c9c9c9;border-radius:8px}
+.gorevler-table-wrap::-webkit-scrollbar-track{background:transparent}
+.gorevler-table-wrap::-webkit-scrollbar-button{display:none}
+
+/* Input and button focus states */
+.filter-cell input:focus, .filter-cell select:focus, .page-input:focus, .filter-btn:focus, .btn-small:focus, .excel-btn:focus{outline:none;box-shadow:0 0 0 3px rgba(14,165,233,0.08);border-color:rgba(14,165,233,0.6)}
+
+/* Top-right "Toplu İşlem" button styling (ensure visible even when disabled) */
+.table-toolbar .right-tools .btn-small{background:#fff;border:1px solid #dcdcdc;color:#333;padding:6px 10px;border-radius:6px;min-width:110px;box-shadow:0 1px 0 rgba(0,0,0,0.03)}
+.table-toolbar .right-tools .btn-small[disabled]{opacity:0.6;cursor:not-allowed}
+
+/* page number input: make it match filter inputs (light background) */
+.pagination-left .page-input{width:44px;padding:6px 8px;text-align:center;border-radius:6px;background:#fff;color:#111;font-weight:700;border:1px solid #e0e6e8}
+
+/* responsive */
+@media (max-width:1100px){
+  .gorevler-table{min-width:900px}
+}
+@media (max-width:900px){
+  .gorevler-table td:nth-child(5), .gorevler-table td:nth-child(6), .gorevler-table td:nth-child(7){display:none}
+  .sidebar{width:72px}
+  .sidebar .sidebar-brand{display:none}
+  .sidebar .nav-item{padding:10px 8px;font-size:13px}
+}
+@media (max-width:600px){
+  .gorevler-header{flex-direction:column;align-items:flex-start;gap:8px}
+  .topbar-left{display:none}
+}
+
+/* Responsive */
+@media (max-width:900px){
+  .gorevler-table td:nth-child(5), .gorevler-table td:nth-child(6), .gorevler-table td:nth-child(7){display:none}
+}

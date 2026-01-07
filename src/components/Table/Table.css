@@ -1,0 +1,10 @@
+.table-container{overflow:auto}
+.app-table{width:100%;border-collapse:collapse;background:#fff}
+.app-table thead th{background:#fff}
+.app-table tbody tr:hover{background:#f4fbff}
+/* keep compatibility with existing gorevler-table selectors */
+.app-table.gorevler-table{min-width:1400px}
+/* responsive */
+@media (max-width:1100px){
+  .app-table.gorevler-table{min-width:900px}
+}

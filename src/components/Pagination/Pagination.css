@@ -1,0 +1,8 @@
+.gorevler-footer{display:flex;justify-content:space-between;align-items:center;padding:12px;border-top:1px solid #e6eef0;margin-top:12px;border-radius:0;background:#f3f4f6}
+.pagination-left{display:flex;align-items:center;gap:8px}
+.pagination-left button{background:transparent;border:1px solid #dcdcdc;padding:6px 8px;border-radius:4px;cursor:pointer}
+.pagination-left button:hover{background:var(--primary);color:#fff;border-color:var(--primary)}
+.page-input{width:52px;padding:6px;text-align:center;border:1px solid #dcdcdc;border-radius:4px}
+.pagination-right{display:flex;align-items:center;gap:12px}
+.pagination-right select{padding:6px;border:1px solid #dcdcdc;border-radius:4px}
+.summary{color:#555;font-size:14px}
